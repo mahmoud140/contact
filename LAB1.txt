@@ -1,0 +1,81 @@
+function divideby (num)
+{if (num%3==0 && num%5==0 )
+  {
+    console.log("fizz buzz");  
+  }
+ else if (num%5)
+ {
+   console.log("buzz");
+ }
+ else if (num%3)
+ {
+   console.log("buzz");
+ }
+  
+}
+// divideby(5);
+
+function bottle_game(myarr)
+{
+  var min=0;
+  var max=myarr.length;
+  var rand = Math.random() *(max -min)+min;
+  console.log(Math.floor(rand))
+  console.log(myarr[Math.floor(rand)]);
+}
+var arr=["ahmed","mohamed","mahmoud"];
+// bottle_game(arr);
+
+function character(str,letter)
+{
+  var indcies=[];
+  for (var i=0;i<str.length;i++)
+    {
+      if (str[i]==letter)
+     {
+      indcies.push(i);
+     }
+    }
+  console.log(indcies);
+}
+
+var str="i am mahmoud in iti";
+// character(str,"i");
+
+
+function Greedy_Game(num)
+{
+  
+  var dollar=Math.floor(num);
+  var quarter,dime,nickle;
+  var rest=Math.ceil((num-dollar)*100);
+  quarter=Math.floor(rest/25);
+  rest=rest-quarter*25;
+  dime=Math.floor(rest/10);
+  rest=rest-dime*10;
+  nickle=Math.floor(rest/5);
+  rest=Math.floor(rest-nickle*5);
+  console.log(dollar,quarter,dime,nickle,rest);
+}
+
+//Greedy_Game(15.95);
+
+
+function Mario_Game(num)
+{ 
+  var arr="";
+  for (var i=0;i<num;i++)
+    {
+      for(var j=num-1;j>i;j--)
+        {
+          arr+=" "; 
+        }
+      for (var z=0;z<=i;z++)
+        {
+          arr+="*";
+        }
+      console.log(arr);
+      arr="";
+    }
+}
+Mario_Game(7);
